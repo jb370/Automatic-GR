@@ -1,4 +1,22 @@
 This is the README file for the Real_Time_Data Folder
-This contains the Clean-Jsons, which are the tweets that have no text or usernames contained. If you want to obtain the full tweet files
-please reach out to me at jb370@st-andrews.ac.uk or burnsjack45@gmail.com to discuss, as the University of St Andrews School of Computer 
-Science Ethics Review Board must sign off on any use of the text or username data. 
+This contains:
+Clean-Jsons
+Examples of the Daily Outputs (Day 1, 
+
+Clean-Json Description:
+These are the tweets that have no text or usernames contained. 
+If you want to obtain the full tweet files please reach out to me at 
+jb370@st-andrews.ac.uk or burnsjack45@gmail.com to discuss, as the 
+University of St Andrews School of Computer Science Ethics Review Board must sign off 
+on any use of the text or username data. 
+
+Daily Outputs Description:
+I have included a few days worth of examples of the daily outputs of the real-time 
+analysis data, included in the file are the count and sentiment for each topic, 
+and the changes for the count and sentiment, the count of languages for each file,
+the topic modeling charts for each language, the Country counts folder which contains
+the count of each mentioned in each tweet file, and two other files for Export topic 
+and finance - topic which were experiments I investigated but did not dive into 
+deeply. The Maps folder has examples of the NER maps, but not related to the files data.
+
+
