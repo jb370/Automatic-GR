@@ -37,15 +37,49 @@ of the sentiment captured was related to any financial assets.
 Call1H_TM_DA_MP5.ipynb:
 This program is the near real time topic modeling program for tracking the emerging geopolitical topics across the seven 
 languages I analyzed. Similiar to Call5min_MP5.ipynb, it first initalizes all the libraries and variables needed for the
-functions of the topic modeling program, herp2.derp2.DyAdF. It then calls all the functions from herp2.derp2.DyAdF. Importantly
+functions of the topic modeling program, DyAdF. It then calls all the functions from DyAdF. Importantly
 after doing so, it sleeps for one hour, as when I was analyzing the data, all three functions here would start at the same 
 time, thus to get one hour of data (to insure I had enough data to create topic models), this function would sleep for an hour.
 It would then be run and produce the change in topics over time visualization once an hour. 
 
-Herp:
+herp:
+This folder contains the Function_Filter_Test2 program, which is two levels down, the first level is the code necessary to intialize
+the program's functions transfers so they can be called in Call5min_MP5.ipynb. Inside the Derp Folder, is the 
+Function_Filter_Test2 program which both calls all the RNNs and other sentiment analysis models used (which I can't upload to github
+due to file size constraints, but if interested I can send the RNNs if you contact me at jb370@st-andrews.ac.uk or burnsjack45@gmail.com)
+This program contains 44 functions which all work to process the sentiment of the tweet's text for the various languages shown 
+in Image 1 in the Real_Time_Python_Code Folder. The Function_Filter_Test2 program first gets the latest batch of tweets from the 
+Twitter_API_JSON_File-MP5.ipynb program and both processes them and creates a seperate "clean" version to be uploaded. It also creates 
+variables for a name of the file, time it is processed, and detects the language of each tweet. It then breaks the tweet batch into
+seven languages data frames so each language data frame can have the sentiment analysis and NER methods applied for each language. Also
+included are exception functions in case a language did not have any tweets in the current batch, so it does not break the program.
+The seven language data frames are then recombined and then a second data frame is created which removed the duplicate tweets 
+generated through the NER process. The new no duplicates data frame is then divided by topic to get the count, the sentiment, 
+and the change in the count and sentiment in four different functions, while a fifth function counts the number of tweets in each
+of the seven languages. While not included in my thesis, two functions analyzing the relationship between countries and their top exports
+and the changes in the geopolitical topics to make economy recommendations were also analyzed. Lastly, the count of the analysis is 
+updated and the main function which calls all the other functions is called. These functions are all called by the Call5min_MP5.ipynb
+program. Additionally, for the NER mapping, additional functions were created that took the data frame with the duplicates and used the
+python library folium to create a map that places the type of geopolitical risk with its associated country or area. 
 
-
-
+herp2:
+This folder contains the DyAdF program, which is two levels down,the first level is the code necessary to intialize
+the program's functions transfers so they can be called in Call1H_TM_DA_MP5.ipynb program. Inside the derp2 folder is the 
+DyAdF program. Like the Function_Filter_Test2 program, the DyAdF program, first initalizes all the libraries and variables needed, 
+but instead of getting the last batch, it takes all the files in the Output folder for processing. This allows for both more effective
+topic models to generate since there is more data but also allows the topics to be tracked over time. The program's process is 
+shown in Image 2 of Real_Time_Python_Code. The first functions in the program create new variables for the Twitter data including 
+adding a language tag, breaks the data set into individual language data sets, creates a date and time of tweet creation for 
+each language data frame, it then sorts the tweets descending by time of creation in each data frame. The next set 
+of functions initalizes the stop words for each language and creates functions to remove the stop words from the text. It also 
+creates the bigram functions and the lemmatization function for each language where possible. Lastly, for the first part there is
+a function that creates a number for the topic created automatically, and a function that computes the coherence value of each topic.
+The second part of the DyAdF program, dynamically computes the topic models over time for each language. For each language data set, the 
+topic modeling functions first remove the stop words, generate the bigrams, lemmatizes the words of the bigrams, it then creates the
+dictionary, the corpus and the term document matrix needed to compute the topic models. It then iterates over different parameter values
+for the number of topics, and alpha and beta hyperparameters to find the mix with the high coherence values with another function. Once
+the values have been determined, they are then inputed into the next function which creates the topic models over time. The topic models
+over time and then visualized. 
 
 
 
