@@ -1,1 +1,13 @@
+Real Time Analysis Files:
 
+These zip files contain the analyses I ran on the real time data.
+
+Analysis.zip: These are the various correlation analysis I ran on the data everyday during the real time collection period,
+comparing the various geopolitical risk indicies based of the sentiment analysis of the tweets and the data of the 
+various financial assets and market prices.
+
+Granger_Tests.zip: Similiar to Analysis.zip, these were the Granger Causality tests I ran for the real time data to see 
+if the indicies contained any predictive information about the financial assets. 
+
+Topic Modelling.zip: This is the analysis I ran for the topic modeling results, comparing them to the Google Trends data
+for the same topics at the hourly, daily, and weekly level. 
