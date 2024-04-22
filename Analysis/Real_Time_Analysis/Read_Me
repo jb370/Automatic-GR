@@ -11,3 +11,6 @@ if the indicies contained any predictive information about the financial assets.
 
 Topic Modelling.zip: This is the analysis I ran for the topic modeling results, comparing them to the Google Trends data
 for the same topics at the hourly, daily, and weekly level. 
+
+Weekly_Topics.zip: This is the results of the weekly topic models were the data for the week of real time daily runs was 
+aggregated and processed by the topic model of over time. This was not included in my thesis. 
