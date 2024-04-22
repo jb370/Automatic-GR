@@ -1,1 +1,51 @@
 This is the Python Code with the Real Time Analysis.
+
+The program files are all contained with in the zip file foo9, while all commented extensively, 
+I will add a brief explanation of each here and how they interact and connect. 
+
+Program Files:
+Twitter_API_JSON_File-MP5.ipynb
+Call5min_MP5.ipynb
+Call1H_TM_DA_MP5.ipynb
+
+Program Folder:
+herp
+herp2
+Output_files (See Data Section)
+
+Empty: 
+json_file
+clean_jsons
+
+Explanations:
+
+Twitter_API_JSON_File-MP5.ipynb: 
+This is the program that interacted with and connected the Twitter / X Filter API. It has all the 
+geopolitical key bigram rules used to collect the tweet data as well as outputing the tweet data into 100 tweet batches for 
+analysis. I duplicated the stream connecting functions below to handle potential disconnection which occured if too many 
+tweets were coming in at once, for example, after a large geopolitical event, and reconnect automatically.
+
+Call5min_MP5.ipynb:
+This program is the real time sentiment analysis program for constructing the various geopolitical risk indicies through
+Twitter / X data. It first initalizes all the libraries, variables, and the various sentiment analysis language programs 
+needed for the functionalized code of the Function_Filter_Test2 program, which will be described later. 
+It also creates all the csv files used to store the output of each run of the Function_Filter_Test2 program. It also 
+imports all the functions from the Function_Filter_Test2 program. It then calls the main function every 30 seconds 
+until the user stops it. Note: the sent_cul_sum() functionwas a test I included to see if the cummulative sum 
+of the sentiment captured was related to any financial assets. 
+
+Call1H_TM_DA_MP5.ipynb:
+This program is the near real time topic modeling program for tracking the emerging geopolitical topics across the seven 
+languages I analyzed. Similiar to Call5min_MP5.ipynb, it first initalizes all the libraries and variables needed for the
+functions of the topic modeling program, herp2.derp2.DyAdF. It then calls all the functions from herp2.derp2.DyAdF. Importantly
+after doing so, it sleeps for one hour, as when I was analyzing the data, all three functions here would start at the same 
+time, thus to get one hour of data (to insure I had enough data to create topic models), this function would sleep for an hour.
+It would then be run and produce the change in topics over time visualization once an hour. 
+
+Herp:
+
+
+
+
+
+
